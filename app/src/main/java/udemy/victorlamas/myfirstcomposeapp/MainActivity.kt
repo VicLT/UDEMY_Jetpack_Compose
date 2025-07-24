@@ -25,6 +25,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import kotlinx.coroutines.launch
 import udemy.victorlamas.myfirstcomposeapp.components.MyFAB
+import udemy.victorlamas.myfirstcomposeapp.components.MyNavigationBar
 import udemy.victorlamas.myfirstcomposeapp.components.MyTopAppBar
 import udemy.victorlamas.myfirstcomposeapp.login.Greeting
 import udemy.victorlamas.myfirstcomposeapp.ui.theme.MyFirstComposeAppTheme
@@ -43,7 +44,8 @@ class MainActivity : ComponentActivity() {
                     topBar = { MyTopAppBar() },
                     snackbarHost = { SnackbarHost(hostState = snackbarHostState) },
                     floatingActionButton = { MyFAB() },
-                    floatingActionButtonPosition = FabPosition.Center
+                    floatingActionButtonPosition = FabPosition.Center,
+                    bottomBar = { MyNavigationBar() }
                 ) { innerPadding ->
                     Box(
                         modifier = Modifier
