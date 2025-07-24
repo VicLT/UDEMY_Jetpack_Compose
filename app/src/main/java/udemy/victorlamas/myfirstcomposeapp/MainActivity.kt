@@ -9,6 +9,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.FabPosition
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarDuration
 import androidx.compose.material3.SnackbarHost
@@ -23,6 +24,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import kotlinx.coroutines.launch
+import udemy.victorlamas.myfirstcomposeapp.components.MyFAB
 import udemy.victorlamas.myfirstcomposeapp.components.MyTopAppBar
 import udemy.victorlamas.myfirstcomposeapp.login.Greeting
 import udemy.victorlamas.myfirstcomposeapp.ui.theme.MyFirstComposeAppTheme
@@ -39,7 +41,9 @@ class MainActivity : ComponentActivity() {
                 Scaffold(
                     modifier = Modifier.fillMaxSize(),
                     topBar = { MyTopAppBar() },
-                    snackbarHost = { SnackbarHost(hostState = snackbarHostState) }
+                    snackbarHost = { SnackbarHost(hostState = snackbarHostState) },
+                    floatingActionButton = { MyFAB() },
+                    floatingActionButtonPosition = FabPosition.Center
                 ) { innerPadding ->
                     Box(
                         modifier = Modifier
