@@ -1,5 +1,6 @@
 package udemy.victorlamas.myfirstcomposeapp.components
 
+import androidx.compose.foundation.clickable
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -13,13 +14,14 @@ import udemy.victorlamas.myfirstcomposeapp.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MyTopAppBar(modifier: Modifier = Modifier) {
+fun MyTopAppBar(modifier: Modifier = Modifier, onNavSelected: () -> Unit) {
     TopAppBar(
         title = { Text("My App") },
         navigationIcon = {
             Icon(
                 painter = painterResource(R.drawable.ic_senderista),
-                contentDescription = null
+                contentDescription = null,
+                modifier = Modifier.clickable { onNavSelected }
             )
         },
         actions = {
