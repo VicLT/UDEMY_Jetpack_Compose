@@ -10,7 +10,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import udemy.victorlamas.myfirstcomposeapp.components.MyBadgeBox
+import udemy.victorlamas.myfirstcomposeapp.components.MyDivider
 import udemy.victorlamas.myfirstcomposeapp.login.Greeting
 import udemy.victorlamas.myfirstcomposeapp.ui.theme.MyFirstComposeAppTheme
 
@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyFirstComposeAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    MyBadgeBox(Modifier.padding(innerPadding))
+                    MyDivider(Modifier.padding(innerPadding))
                 }
             }
         }
