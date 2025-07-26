@@ -26,10 +26,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import kotlinx.coroutines.launch
-import udemy.victorlamas.myfirstcomposeapp.components.MyDateDialog
 import udemy.victorlamas.myfirstcomposeapp.components.MyFAB
 import udemy.victorlamas.myfirstcomposeapp.components.MyModalDrawer
 import udemy.victorlamas.myfirstcomposeapp.components.MyNavigationBar
+import udemy.victorlamas.myfirstcomposeapp.components.MyTimePicker
 import udemy.victorlamas.myfirstcomposeapp.components.MyTopAppBar
 import udemy.victorlamas.myfirstcomposeapp.login.Greeting
 import udemy.victorlamas.myfirstcomposeapp.ui.theme.MyFirstComposeAppTheme
@@ -59,7 +59,7 @@ class MainActivity : ComponentActivity() {
                 val snackbarHostState = remember { SnackbarHostState() }
                 val scope = rememberCoroutineScope()
 
-                MyDateDialog()
+                MyTimePicker()
 
                 MyModalDrawer(drawerState) {
                     Scaffold(
