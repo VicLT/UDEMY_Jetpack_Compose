@@ -66,9 +66,9 @@ fun MyButtons(modifier: Modifier) {
 }
 
 @Composable
-fun MyFAB(modifier: Modifier = Modifier) {
+fun MyFAB(modifier: Modifier = Modifier, showCombat: () -> Unit) {
     FloatingActionButton(
-        onClick = {},
+        onClick = { showCombat() },
         shape = RoundedCornerShape(25),
         contentColor = Color.White,
         containerColor = Color.Black,
