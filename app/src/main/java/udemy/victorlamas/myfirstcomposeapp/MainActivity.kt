@@ -34,7 +34,7 @@ import udemy.victorlamas.myfirstcomposeapp.components.MyFAB
 import udemy.victorlamas.myfirstcomposeapp.components.MyModalDrawer
 import udemy.victorlamas.myfirstcomposeapp.components.MyNavigationBar
 import udemy.victorlamas.myfirstcomposeapp.components.MyTopAppBar
-import udemy.victorlamas.myfirstcomposeapp.components.advanced.MyLaunchedEffect
+import udemy.victorlamas.myfirstcomposeapp.components.advanced.MyDerivedStateOf
 import udemy.victorlamas.myfirstcomposeapp.components.model.PokemonCombat
 import udemy.victorlamas.myfirstcomposeapp.login.Greeting
 import udemy.victorlamas.myfirstcomposeapp.ui.theme.MyFirstComposeAppTheme
@@ -118,8 +118,9 @@ class MainActivity : ComponentActivity() {
                                     }
                                 }
                             )
-
-                            MyLaunchedEffect {}
+                            // InteractionSourceExample()
+                            // LaunchedEffect {}
+                            MyDerivedStateOf()
                         }
                     }
                 }

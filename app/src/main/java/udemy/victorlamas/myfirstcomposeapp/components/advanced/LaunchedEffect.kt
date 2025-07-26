@@ -32,9 +32,7 @@ fun MyLaunchedEffect(modifier: Modifier = Modifier, onFinished: () -> Unit) {
     }
 
     // Se ejecuta al principio una única vez
-    LaunchedEffect(Unit) {
-
-    }
+    LaunchedEffect(Unit) { }
 
     Box(
         modifier = Modifier
