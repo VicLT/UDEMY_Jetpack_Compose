@@ -26,7 +26,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import kotlinx.coroutines.launch
-import udemy.victorlamas.myfirstcomposeapp.components.MyDialog
+import udemy.victorlamas.myfirstcomposeapp.components.MyDateDialog
 import udemy.victorlamas.myfirstcomposeapp.components.MyFAB
 import udemy.victorlamas.myfirstcomposeapp.components.MyModalDrawer
 import udemy.victorlamas.myfirstcomposeapp.components.MyNavigationBar
@@ -59,7 +59,7 @@ class MainActivity : ComponentActivity() {
                 val snackbarHostState = remember { SnackbarHostState() }
                 val scope = rememberCoroutineScope()
 
-                MyDialog()
+                MyDateDialog()
 
                 MyModalDrawer(drawerState) {
                     Scaffold(
