@@ -27,10 +27,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import kotlinx.coroutines.launch
 import udemy.victorlamas.myfirstcomposeapp.components.MyCustomDialog
 import udemy.victorlamas.myfirstcomposeapp.components.MyFAB
+import udemy.victorlamas.myfirstcomposeapp.components.MyGridList
 import udemy.victorlamas.myfirstcomposeapp.components.MyModalDrawer
 import udemy.victorlamas.myfirstcomposeapp.components.MyNavigationBar
 import udemy.victorlamas.myfirstcomposeapp.components.MyTopAppBar
-import udemy.victorlamas.myfirstcomposeapp.components.ScrollList
 import udemy.victorlamas.myfirstcomposeapp.components.model.PokemonCombat
 import udemy.victorlamas.myfirstcomposeapp.login.Greeting
 import udemy.victorlamas.myfirstcomposeapp.ui.theme.MyFirstComposeAppTheme
@@ -119,7 +119,8 @@ class MainActivity : ComponentActivity() {
 //                            MyDerivedStateOf()
 //                            MyBasicList {}
 //                            MyAdvancedList()
-                            ScrollList()
+//                            ScrollList()
+                            MyGridList()
                         }
                     }
                 }
