@@ -25,7 +25,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import kotlinx.coroutines.launch
-import udemy.victorlamas.myfirstcomposeapp.components.MyBasicList
+import udemy.victorlamas.myfirstcomposeapp.components.MyAdvancedList
 import udemy.victorlamas.myfirstcomposeapp.components.MyCustomDialog
 import udemy.victorlamas.myfirstcomposeapp.components.MyFAB
 import udemy.victorlamas.myfirstcomposeapp.components.MyModalDrawer
@@ -117,7 +117,8 @@ class MainActivity : ComponentActivity() {
 //                            InteractionSourceExample()
 //                            LaunchedEffect {}
 //                            MyDerivedStateOf()
-                            MyBasicList {}
+//                            MyBasicList {}
+                            MyAdvancedList()
                         }
                     }
                 }
