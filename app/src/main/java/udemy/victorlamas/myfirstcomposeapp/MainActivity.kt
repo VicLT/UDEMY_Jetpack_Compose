@@ -5,18 +5,14 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.FabPosition
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.SnackbarDuration
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
-import androidx.compose.material3.SnackbarResult
-import androidx.compose.material3.Text
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -29,12 +25,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import kotlinx.coroutines.launch
+import udemy.victorlamas.myfirstcomposeapp.components.MyBasicList
 import udemy.victorlamas.myfirstcomposeapp.components.MyCustomDialog
 import udemy.victorlamas.myfirstcomposeapp.components.MyFAB
 import udemy.victorlamas.myfirstcomposeapp.components.MyModalDrawer
 import udemy.victorlamas.myfirstcomposeapp.components.MyNavigationBar
 import udemy.victorlamas.myfirstcomposeapp.components.MyTopAppBar
-import udemy.victorlamas.myfirstcomposeapp.components.advanced.MyDerivedStateOf
 import udemy.victorlamas.myfirstcomposeapp.components.model.PokemonCombat
 import udemy.victorlamas.myfirstcomposeapp.login.Greeting
 import udemy.victorlamas.myfirstcomposeapp.ui.theme.MyFirstComposeAppTheme
@@ -93,34 +89,35 @@ class MainActivity : ComponentActivity() {
                                 .background(Color.Cyan),
                             contentAlignment = Alignment.Center
                         ) {
-                            Text(
-                                "Esta es mi screen",
-                                modifier = Modifier.clickable {
-                                    scope.launch {
-                                        val result =
-                                            snackbarHostState.showSnackbar(
-                                                message = "Eliminado",
-                                                actionLabel = "Deshacer",
-                                                duration = SnackbarDuration.Short
-                                            )
-
-                                        if (result == SnackbarResult.ActionPerformed) {
-                                            // Usuario pulsa "deshacer"
-                                            snackbarHostState.showSnackbar(
-                                                message = "Deshecho"
-                                            )
-                                        } else {
-                                            // Usuario no hace nada
-                                            snackbarHostState.showSnackbar(
-                                                message = "Confirmado"
-                                            )
-                                        }
-                                    }
-                                }
-                            )
-                            // InteractionSourceExample()
-                            // LaunchedEffect {}
-                            MyDerivedStateOf()
+//                            Text(
+//                                "Esta es mi screen",
+//                                modifier = Modifier.clickable {
+//                                    scope.launch {
+//                                        val result =
+//                                            snackbarHostState.showSnackbar(
+//                                                message = "Eliminado",
+//                                                actionLabel = "Deshacer",
+//                                                duration = SnackbarDuration.Short
+//                                            )
+//
+//                                        if (result == SnackbarResult.ActionPerformed) {
+//                                            // Usuario pulsa "deshacer"
+//                                            snackbarHostState.showSnackbar(
+//                                                message = "Deshecho"
+//                                            )
+//                                        } else {
+//                                            // Usuario no hace nada
+//                                            snackbarHostState.showSnackbar(
+//                                                message = "Confirmado"
+//                                            )
+//                                        }
+//                                    }
+//                                }
+//                            )
+//                            InteractionSourceExample()
+//                            LaunchedEffect {}
+//                            MyDerivedStateOf()
+                            MyBasicList {}
                         }
                     }
                 }
