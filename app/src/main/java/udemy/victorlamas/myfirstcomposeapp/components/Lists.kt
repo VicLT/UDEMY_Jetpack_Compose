@@ -222,6 +222,3 @@ fun MyGridList(modifier: Modifier = Modifier) {
         }
     }
 }
-
-
-
