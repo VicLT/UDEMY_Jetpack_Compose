@@ -4,6 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.toRoute
+import udemy.victorlamas.myfirstcomposeapp.components.navigation.examples.DetailScreen
 import udemy.victorlamas.myfirstcomposeapp.components.navigation.examples.HomeScreen
 import udemy.victorlamas.myfirstcomposeapp.components.navigation.examples.LoginScreen
 
@@ -16,7 +18,19 @@ fun NavigationWrapper() {
         }
 
         composable<Home> {
-            HomeScreen(navigateBack = { navController.popBackStack() })
+            HomeScreen(
+                navigateBack = { navController.popBackStack() },
+                navigateToDetail = { id, booleanValue ->
+                    navController.navigate(Detail(id = id, test = booleanValue))
+                }
+            )
+        }
+
+        composable<Detail> { navBackStackEntry ->
+            //val detail = navBackStackEntry.toRoute<Detail>()
+            val detail: Detail = navBackStackEntry.toRoute()
+            //detail.test
+            DetailScreen(detail.id)
         }
     }
 }
