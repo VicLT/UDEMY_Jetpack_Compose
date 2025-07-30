@@ -14,18 +14,21 @@ import androidx.compose.ui.unit.sp
 import udemy.victorlamas.myfirstcomposeapp.components.navigation.examples.model.SettingsModel
 
 @Composable
-fun DetailScreen(id: String, navigateToSettings: (SettingsModel) -> Unit) {
-    var settingsModel = SettingsModel(id = "VICTOR", darkMode = true)
-
+fun SettingsScreen(settingsModel: SettingsModel) {
     Column(
-        Modifier.fillMaxSize().background(Color.Yellow),
+        Modifier
+            .fillMaxSize()
+            .background(Color.Blue),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Spacer(Modifier.weight(1f))
-        Text("DETAIL: $id", fontSize = 30.sp)
+        Text(
+            "SETTINGS: id:${settingsModel.id}, darkMode:${settingsModel.darkMode}",
+            fontSize = 30.sp
+        )
         Spacer(Modifier.weight(1f))
-        Button(onClick = { navigateToSettings(settingsModel) }) {
-            Text("Ajustes")
+        Button(onClick = {  }) {
+            Text("Volver al inicio")
         }
         Spacer(Modifier.weight(1f))
     }

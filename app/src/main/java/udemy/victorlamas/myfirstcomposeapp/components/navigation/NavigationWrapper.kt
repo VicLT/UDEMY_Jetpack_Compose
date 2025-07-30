@@ -8,6 +8,10 @@ import androidx.navigation.toRoute
 import udemy.victorlamas.myfirstcomposeapp.components.navigation.examples.DetailScreen
 import udemy.victorlamas.myfirstcomposeapp.components.navigation.examples.HomeScreen
 import udemy.victorlamas.myfirstcomposeapp.components.navigation.examples.LoginScreen
+import udemy.victorlamas.myfirstcomposeapp.components.navigation.examples.SettingsScreen
+import udemy.victorlamas.myfirstcomposeapp.components.navigation.examples.model.SettingsModel
+import udemy.victorlamas.myfirstcomposeapp.components.navigation.types.settingsModelType
+import kotlin.reflect.typeOf
 
 @Composable
 fun NavigationWrapper() {
@@ -30,7 +34,23 @@ fun NavigationWrapper() {
             //val detail = navBackStackEntry.toRoute<Detail>()
             val detail: Detail = navBackStackEntry.toRoute()
             //detail.test
-            DetailScreen(detail.id)
+
+            DetailScreen(
+                id = detail.id,
+                navigateToSettings = {
+                    navController.navigate(Settings(it))
+                }
+            )
+        }
+
+        composable<Settings>(
+            typeMap = mapOf(typeOf<SettingsModel>() to settingsModelType)
+        ) { navBackStackEntry ->
+            //val settings = navBackStackEntry.toRoute<Settings>()
+            val settings: Settings = navBackStackEntry.toRoute()
+            //settings.settingsModel.id
+
+            SettingsScreen(settings.settingsModel)
         }
     }
 }
