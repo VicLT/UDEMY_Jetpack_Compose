@@ -15,7 +15,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.tooling.preview.Preview
 import udemy.victorlamas.myfirstcomposeapp.components.MyCustomDialog
-import udemy.victorlamas.myfirstcomposeapp.components.animations.MyCrossfade
+import udemy.victorlamas.myfirstcomposeapp.components.animations.MyAnimateContent
 import udemy.victorlamas.myfirstcomposeapp.components.model.PokemonCombat
 import udemy.victorlamas.myfirstcomposeapp.login.Greeting
 import udemy.victorlamas.myfirstcomposeapp.ui.theme.MyFirstComposeAppTheme
@@ -58,7 +58,8 @@ class MainActivity : ComponentActivity() {
                     onDismissDialog = { showDialog = false }
                 )
 
-                MyCrossfade()
+                MyAnimateContent()
+//                MyCrossfade()
 //                FullAnimateAsState()
 //                MyAnimatedVisibility()
 //                NavigationWrapper()
