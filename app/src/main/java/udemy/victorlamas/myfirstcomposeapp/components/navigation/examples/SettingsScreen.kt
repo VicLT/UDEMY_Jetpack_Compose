@@ -27,7 +27,7 @@ fun SettingsScreen(settingsModel: SettingsModel, navigateToHome: () -> Unit) {
             fontSize = 30.sp
         )
         Spacer(Modifier.weight(1f))
-        Button(onClick = {  }) {
+        Button(onClick = { navigateToHome() }) {
             Text("Volver al inicio")
         }
         Spacer(Modifier.weight(1f))
