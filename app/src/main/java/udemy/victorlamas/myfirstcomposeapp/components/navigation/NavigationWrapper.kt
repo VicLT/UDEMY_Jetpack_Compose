@@ -10,7 +10,7 @@ import udemy.victorlamas.myfirstcomposeapp.components.navigation.examples.HomeSc
 import udemy.victorlamas.myfirstcomposeapp.components.navigation.examples.LoginScreen
 import udemy.victorlamas.myfirstcomposeapp.components.navigation.examples.SettingsScreen
 import udemy.victorlamas.myfirstcomposeapp.components.navigation.examples.model.SettingsModel
-import udemy.victorlamas.myfirstcomposeapp.components.navigation.types.settingsModelType
+import udemy.victorlamas.myfirstcomposeapp.components.navigation.types.createNavType
 import kotlin.reflect.typeOf
 
 @Composable
@@ -44,7 +44,7 @@ fun NavigationWrapper() {
         }
 
         composable<Settings>(
-            typeMap = mapOf(typeOf<SettingsModel>() to settingsModelType)
+            typeMap = mapOf(typeOf<SettingsModel>() to createNavType<SettingsModel>())
         ) { navBackStackEntry ->
             //val settings = navBackStackEntry.toRoute<Settings>()
             val settings: Settings = navBackStackEntry.toRoute()

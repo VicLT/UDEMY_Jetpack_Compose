@@ -35,5 +35,4 @@ val settingsModelType =
         override fun serializeAsValue(value: SettingsModel): String {
             return Uri.encode(Json.encodeToString(value))
         }
-
     }
