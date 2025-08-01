@@ -46,11 +46,17 @@ fun NavigationWrapper() {
         composable<Settings>(
             typeMap = mapOf(typeOf<SettingsModel>() to createNavType<SettingsModel>())
         ) { navBackStackEntry ->
-            //val settings = navBackStackEntry.toRoute<Settings>()
             val settings: Settings = navBackStackEntry.toRoute()
-            //settings.settingsModel.id
-
-            SettingsScreen(settings.settingsModel)
+            SettingsScreen(
+                settingsModel = settings.settingsModel,
+                navigateToHome = {
+                    navController.navigate(Login) {
+                        popUpTo<Login> {
+                            inclusive = true
+                        }
+                    }
+                }
+            )
         }
     }
 }

@@ -14,7 +14,7 @@ import androidx.compose.ui.unit.sp
 import udemy.victorlamas.myfirstcomposeapp.components.navigation.examples.model.SettingsModel
 
 @Composable
-fun SettingsScreen(settingsModel: SettingsModel) {
+fun SettingsScreen(settingsModel: SettingsModel, navigateToHome: () -> Unit) {
     Column(
         Modifier
             .fillMaxSize()
