@@ -19,7 +19,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun LoginScreen(navigateToDetail: () -> Unit) {
+fun LoginScreen(navigateToHome: () -> Unit) {
     var showView by remember { mutableStateOf(false) }
 
     Column(
@@ -31,8 +31,11 @@ fun LoginScreen(navigateToDetail: () -> Unit) {
         Spacer(Modifier.weight(1f))
         Text("LOGIN", fontSize = 30.sp)
         Spacer(Modifier.weight(1f))
-        Button(onClick = { navigateToDetail() }) {
-            Text("Navegar")
+        Button(onClick = { navigateToHome() }) {
+            Text("Home")
+        }
+        Button(onClick = { showView = true }) {
+            Text("Red view in login")
         }
         Spacer(Modifier.weight(1f))
     }
@@ -41,8 +44,10 @@ fun LoginScreen(navigateToDetail: () -> Unit) {
         BackHandler {
             showView = false
         }
-        Box(Modifier
-            .fillMaxSize()
-            .background(Color.Red))
+        Box(
+            Modifier
+                .fillMaxSize()
+                .background(Color.Red)
+        )
     }
 }

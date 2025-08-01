@@ -15,8 +15,8 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.tooling.preview.Preview
 import udemy.victorlamas.myfirstcomposeapp.components.MyCustomDialog
+import udemy.victorlamas.myfirstcomposeapp.components.animations.MyAnimatedVisibility
 import udemy.victorlamas.myfirstcomposeapp.components.model.PokemonCombat
-import udemy.victorlamas.myfirstcomposeapp.components.navigation.NavigationWrapper
 import udemy.victorlamas.myfirstcomposeapp.login.Greeting
 import udemy.victorlamas.myfirstcomposeapp.ui.theme.MyFirstComposeAppTheme
 
@@ -58,7 +58,9 @@ class MainActivity : ComponentActivity() {
                     onDismissDialog = { showDialog = false }
                 )
 
-                NavigationWrapper()
+                MyAnimatedVisibility()
+
+//                NavigationWrapper()
 
 //                MyModalDrawer(drawerState) {
 //                    Scaffold(
